@@ -13,7 +13,7 @@
   app.use(cors());
   app.use(cookieParser());
 
-  mongoose.connect('mongodb://127.0.0.1:27017/albishir', {
+  mongoose.connect('mongodb+srv://donalddyusuf:bAzi8s5RMq3QmUBF@registeration.pqcuk.mongodb.net/?retryWrites=true&w=majority', {
     serverSelectionTimeoutMS: 5000,
     socketTimeoutMS: 45000
   })
@@ -22,6 +22,7 @@
     console.error('MongoDB connection error:', err);
     process.exit(1);
   });
+
 
   app.use('/api/auth', authRoutes);
 
